@@ -1,0 +1,73 @@
+.productos-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.card-producto {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 280px;
+    height: 450px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 15px;
+    background: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+    overflow: hidden;
+}
+
+.card-producto:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.producto-img {
+    width: 120px;
+    height: 120px;
+    object-fit: contain;
+}
+
+h4 {
+    font-size: 16px;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.producto-precio {
+    font-size: 14px;
+    font-weight: bold;
+    color: #28a745;
+}
+
+.producto-descripcion {
+    font-size: 12px;
+    color: #555;
+    flex-grow: 1;
+    padding: 0 10px;
+    max-height: 100px;
+    overflow-y: auto;
+    text-overflow: ellipsis;
+}
+
+.btn-agregar {
+    width: 90%;
+    padding: 10px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    margin-top: auto;
+}
+
+.btn-agregar:hover {
+    background-color: #218838;
+}
