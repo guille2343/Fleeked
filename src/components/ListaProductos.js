@@ -9,6 +9,7 @@ import "../style/VistaProductos.css";
 const ListaProductos = () => {
   const [productos, setProductos] = useState([]);
   const [filtro, setFiltro] = useState("");
+  const [categoria, setCategoria] = useState("");
   const [carrito, setCarrito] = useState([]);
   const [mostrarCarrito, setMostrarCarrito] = useState(false);
 
@@ -52,14 +53,16 @@ const ListaProductos = () => {
   };
 
   const productosFiltrados = productos.filter((product) =>
-    product.title.toLowerCase().includes(filtro.toLowerCase())
+    (product.title.toLowerCase().includes(filtro.toLowerCase()) ||
+    product.description.toLowerCase().includes(filtro.toLowerCase())) &&
+    (categoria === "" || product.category === categoria)
   );
 
   return (
     <div className="contenedor-principal">
       <div className="productos-section">
         <h1>FLEEKED</h1>
-        <BarraBusqueda setFiltro={setFiltro} />
+        <BarraBusqueda setFiltro={setFiltro} setCategoria={setCategoria} />
         <div className="productos-container">
           {productosFiltrados.map((product) => (
             <div key={product.id} className="card-producto">
