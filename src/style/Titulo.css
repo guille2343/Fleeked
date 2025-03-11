@@ -1,26 +1,32 @@
 h1 {
-    font-family: "Arial", sans-serif;
-    font-size: 4rem;
-    font-weight: bold;
-    color: transparent;
-    background: linear-gradient(90deg, #28a745, #218838, #34d058);
-    -webkit-background-clip: text;
-    background-clip: text;
-    text-align: center;
-    text-transform: uppercase;
-    letter-spacing: 4px;
-    margin: 20px 0;
-    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+  font-family: "Arial", sans-serif;
+  font-size: 4rem;
+  font-weight: bold;
+  color: transparent;
+  background: linear-gradient(
+    90deg,
+    #fcfcfc,
+    #626964,
+    #116122,
+    #083517,
+    #090c0a
+  );
+  background-clip: text;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  margin: 20px 0;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
 }
 
 @media (max-width: 768px) {
-    h1 {
+  h1 {
     font-size: 3rem;
-    }
+  }
 }
 
 @media (max-width: 480px) {
-    h1 {
+  h1 {
     font-size: 2.5rem;
-    }
+  }
 }
