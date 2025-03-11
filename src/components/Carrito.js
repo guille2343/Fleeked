@@ -10,7 +10,7 @@ const Carrito = ({
   setMostrarCarrito,
 }) => {
   return (
-    <div className={`carrito-modal ${mostrarCarrito ? "mostrar" : ""}`}>
+    <div className={"carrito-modal " + (mostrarCarrito ? "mostrar" : "")}>
       <div className="carrito-contenido">
         <h2>🛒 Carrito</h2>
         <button

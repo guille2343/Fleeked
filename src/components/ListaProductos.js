@@ -52,10 +52,11 @@ const ListaProductos = () => {
     setCarrito([]);
   };
 
-  const productosFiltrados = productos.filter((product) =>
-    (product.title.toLowerCase().includes(filtro.toLowerCase()) ||
-    product.description.toLowerCase().includes(filtro.toLowerCase())) &&
-    (categoria === "" || product.category === categoria)
+  const productosFiltrados = productos.filter(
+    (product) =>
+      (product.title.toLowerCase().includes(filtro.toLowerCase()) ||
+        product.description.toLowerCase().includes(filtro.toLowerCase())) &&
+      (categoria === "" || product.category === categoria)
   );
 
   return (
