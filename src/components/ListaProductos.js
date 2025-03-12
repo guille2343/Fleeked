@@ -5,6 +5,7 @@ import BarraBusqueda from "./BarraBusqueda";
 import Carrito from "./Carrito";
 import { FaShoppingCart } from "react-icons/fa";
 import "../style/VistaProductos.css";
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 const ListaProductos = () => {
   const [productos, setProductos] = useState([]);
@@ -30,6 +31,11 @@ const ListaProductos = () => {
     };
     getProductos();
   }, []);
+
+  const guardarNuevoProducto = () => {
+    alert("Para verificar si srive el boton guardar nuevo producto");
+  };
+
 
   const agregarAlCarrito = (producto) => {
     setCarrito([...carrito, producto]);
@@ -63,6 +69,13 @@ const ListaProductos = () => {
     <div className="contenedor-principal">
       <div className="productos-section">
         <h1>FLEEKED</h1>
+        <button 
+          className="btn btn-success mb-3"
+          onClick={guardarNuevoProducto}
+          style={{ marginRight: '20px',marginLeft: '20px'}}
+        >
+          Agregar Nuevo Producto
+        </button>
         <BarraBusqueda setFiltro={setFiltro} setCategoria={setCategoria} />
         <div className="productos-container">
           {productosFiltrados.map((product) => (
